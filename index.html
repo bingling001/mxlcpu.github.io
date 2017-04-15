@@ -39,8 +39,11 @@
 		<script type="text/javascript">
 			function serachsk() {
 				var wq = document.getElementById("searchvideo").value;
-				var h1 = "http://www.soku.com/search_video/q_" + wq;
-				var h2 = "http://so.iqiyi.com/so/q_" + wq + "?source=input";
+				var h1 = "http://www.soku.com/search_video/q_" + encodeURIComponent(wq);
+				var h2 = "http://so.iqiyi.com/so/q_" + encodeURIComponent(wq) + "?source=input";
+				var h3 = 'http://www.panc.cc/s/'+encodeURIComponent(wq);
+				var h4 = 'http://www.bdsola.com/search.php?kw='+encodeURIComponent(wq);
+				var h5 = 'http://wangpan007.com/share/kw'+encodeURIComponent(wq);
 				if(wq == "") {
 					alert("请输入视频名称!");
 					return;
