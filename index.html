@@ -39,23 +39,17 @@
 		<script type="text/javascript">
 			function serachsk() {
 				var wq = document.getElementById("searchvideo").value;
-				var h1 = "http://www.soku.com/search_video/q_" + encodeURIComponent(wq);
-				var h2 = "http://so.iqiyi.com/so/q_" + encodeURIComponent(wq) + "?source=input";
-				var h3 = 'http://www.panc.cc/s/'+encodeURIComponent(wq);
-				var h4 = 'http://www.bdsola.com/search.php?kw='+encodeURIComponent(wq);
-				var h5 = 'http://wangpan007.com/share/kw'+encodeURIComponent(wq);
+				var h1 = "http://www.soku.com/search_video/q_" + wq;
+				var h2 = "http://so.iqiyi.com/so/q_" + wq + "?source=input";
 				if(wq == "") {
 					alert("请输入视频名称!");
 					return;
 				}
 				window.open(h1, "_blank");
 				window.open(h2, "_blank");
-				window.open(h3, "_blank");
-				window.open(h4, "_blank");
-				window.open(h5, "_blank");
 			}
 		</script>
-
+		<script src="//cdn.ckeditor.com/4.6.2/full/ckeditor.js"></script>
 	</head>
 
 	<body>
@@ -63,7 +57,7 @@
 			<div class="container-fluid">
 				<div class="navbar-header">
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        					<span class="sr-only">更多</span>
+        					<span class="sr-only"></span>
         					<span class="icon-bar"></span>
         					<span class="icon-bar"></span>
         					<span class="icon-bar"></span>
@@ -191,22 +185,26 @@
 					<div class="input-group" style="width: 100%;">
 						<span class="input-group-addon input-lg" style="width: 80px; ">选择接口</span>
 						<select class="form-control input-lg" id="jk">
-							<option value="http://api.47ks.com/webcloud/?v=" selected>接口一(优酷、乐视、搜狐、爱奇艺、腾讯)</option>
-							<option value="https://aikan-tv.com/tong.php?url=">接口二(优酷、腾讯、芒果、乐视、搜狐、B站)</option>
-							<option value="http://yun.mt2t.com/yun?url=">接口三(爱奇艺、搜狐、腾讯、乐视、优酷)</option>
+							<option value="http://api.47ks.com/webcloud/?v=" selected>接口一(全部网站通用)</option>
+							<option value="http://www.100000001.top/video.php?url=">接口二(全部网站通用)</option>
+							<option value="http://yun.mt2t.com/yun?url=">接口三(全部网站通用)</option>
 							<option value="http://www.yydy8.com/Common/?url=">接口四(全部网站通用)</option>
-							<option value="http://000o.cc/jx/ty.php?url=">接口五(爱奇艺、搜狐、乐视、芒果、优酷)</option>
-							<option value="http://b.000o.cc/jx2/?url=">接口六(爱奇艺、搜狐、乐视、芒果、优酷)</option>
-							<option value="http://yyygwz.com/index.php?url=">接口七(爱奇艺、搜狐、乐视、芒果、优酷)</option>
-							<option value="https://aikan-tv.com/qy.php?url=">接口八(爱奇艺)</option>
-							<option value="https://aikan-tv.com/lamian.php?url=">接口九(拉面视频www.lamian.tv)</option>
+							<option value="http://000o.cc/jx/ty.php?url=">接口五(全部网站通用)</option>
+							<option value="http://qtzr.net/s/?qt=">接口六(全部网站通用)</option>
+							<option value="http://yyygwz.com/index.php?url=">接口七(全部网站通用)</option>
+							<option value="http://www.521804.com/jiexi/vip.php?url=">接口八(全部网站通用)</option>
+							<option value="http://www.wmxz.wang/video.php?url=">接口九(全部网站通用)</option>
+							<option value="http://v.72du.com/api/?url=">接口十(全部网站通用)</option>
+							<option value="http://www.200919.com/jiexi/vip.php?url=">接十一(全部网站通用)</option>
+							<option value="http://www.chepeijian.cn/jiexi/vip.php?url=">接口十二(全部网站通用)</option>
+							<option value="http://v.72du.com/api/?url=">接口十三(全部网站通用)</option>
 						</select>
 					</div><br/>
 					<div class="input-group" style="width: 100%;"><span class="input-group-addon input-lg" style="width: 80px;">播放地址</span><input class="form-control input-lg" type="search" placeholder="在此输入播放地址" id="url"></div><br>
 					<div><button id="bf" type="button" class="btn btn-success btn-lg btn-block" onclick="dihejk()">输入网址后点此播放</button></div>
 				</form>
 			</div><br><br>
-			<div class="alert alert-danger" role="alert">所提供的视频来源均由网上搜集。如果不能播放请先允许flashplayer运行,任然不能播放尝试换一个接口!有什么意见或者建议联系我微信啊!</div>
+			<div class="alert alert-danger" role="alert">所提供的视频来源均由网上搜集。如果不能播放请先允许flashplayer运行!仍然不能播放尝试换一个接口播放!有什么意见或者建议联系我微信啊!</div>
 		</div><br>
 		<div class="copyright">
 			<div class="container">
