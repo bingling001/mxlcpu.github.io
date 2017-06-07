@@ -60,7 +60,7 @@
 		<script src="//cdn.ckeditor.com/4.6.2/full/ckeditor.js"></script>
 	</head>
 
-	<body>
+	<body >
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="opacity: 0.8">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -170,7 +170,7 @@
 		</nav>
 
 		<br><br><br><br>
-		<div style="position:fixed; top: 155px; right: 0px;  z-index:9999; float: right;">
+		<div style="display: none; position:fixed; top: 155px; right: 0px;  z-index:9999; float: right;">
 			<wb:bulkfollow uids="5510475336" type="0" width="150" count="1" color="C2D9F2,FFFFFF,0082CB,666666" titlebar="n"></wb:bulkfollow>
 		</div>
 		<div class="container" style="padding-top:0px;" id="wbk">
@@ -217,28 +217,70 @@
 				</form>
 			</div>
 			<br><br>
-			<div class="alert alert-danger" role="alert">所提供的视频来源均由网上搜集。如果不能播放请先允许FlashPlayer运行!仍然不能播放尝试换一个接口播放!有什么意见或者建议请在我<a href="http://weibo.com/945671858" target="_blank">微博(推荐)</a>,上反馈或在下面留言!</div>
+			<div class="alert alert-danger" role="alert">所提供的视频来源均由网上搜集。如果不能播放请先允许FlashPlayer运行!仍然不能播放尝试换一个接口播放!有什么意见或者建议请在我
+				<a href="http://weibo.com/945671858" target="_blank">微博(推荐)</a>,上反馈或在下面留言!</div>
 		</div>
 		<br><br>
-		<div >
+		<div style="display: none;">
 			<!--
                 	作者：mxlcpu
                 	时间：2017-06-01
                 	描述：wbcomments
                 -->
-			<wb:comments url="https://mxlcpu.github.io/index.html" width="auto" appkey="3697795796" ralateuid="5510475336" ></wb:comments>
+			<wb:comments url="https://mxlcpu.github.io/index.html" width="auto" appkey="3697795796" ralateuid="5510475336"></wb:comments>
 		</div>
 		<br />
-	<!--畅言PC和WAP自适应版-->
-<!--PC和WAP自适应版-->
-<div style="display: none" id="SOHUCS" sid="mxlcpu" ></div> 
-<script type="text/javascript"> 
-(function(){ 
-var appid = 'cyt2CfzAq'; 
-var conf = 'prod_56b1600d60bad08bb7eb705986c79425'; 
-var width = window.innerWidth || document.documentElement.clientWidth; 
-if (width < 960) { 
-window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+		<!--
+        	作者：mxlcpu
+        	时间：2017-06-07
+        	描述：wbxiu
+        -->
+		<div style="margin:0 auto; width: 80%;">
+			
+			<iframe width="100%" height="650" class="share_self" frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=650&fansRow=1&ptype=1&speed=0&skin=9&isTitle=0&noborder=1&isWeibo=1&isFans=1&uid=5510475336&verifier=36f66de9&dpc=1"></iframe>
+		</div>
+
+		<!--畅言PC和WAP自适应版-->
+		<!--PC和WAP自适应版-->
+		<div style="display: none" id="SOHUCS" sid="mxlcpu"></div>
+		<script type="text/javascript">
+			(function() {
+				var appid = 'cyt2CfzAq';
+				var conf = 'prod_56b1600d60bad08bb7eb705986c79425';
+				var width = window.innerWidth || document.documentElement.clientWidth;
+				if(width < 960) {
+					window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+				} else {
+					var loadJs = function(d, a) {
+						var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+						var b = document.createElement("script");
+						b.setAttribute("type", "text/javascript");
+						b.setAttribute("charset", "UTF-8");
+						b.setAttribute("src", d);
+						if(typeof a === "function") {
+							if(window.attachEvent) {
+								b.onreadystatechange = function() {
+									var e = b.readyState;
+									if(e === "loaded" || e === "complete") {
+										b.onreadystatechange = null;
+										a()
+									}
+								}
+							} else {
+								b.onload = a
+							}
+						}
+						c.appendChild(b)
+					};
+					loadJs("https://changyan.sohu.com/upload/changyan.js", function() {
+						window.changyan.api.config({
+							appid: appid,
+							conf: conf
+						})
+					});
+				}
+			})();
+		</script>
 		<br>
 		<div class="copyright">
 			<div class="container">
